@@ -21,8 +21,8 @@ jobs:
         cache: 'yarn'
 
     - name: Install dependecies
-      run: 
-        cd home/runner/work/WaiterApp/WaiterApp/fe
+      run: |
+        cd WaiterApp/fe
         yarn install --frozen-lockfile 
       
     - name: Linting
