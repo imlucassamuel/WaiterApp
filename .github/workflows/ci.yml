@@ -22,7 +22,7 @@ jobs:
 
     - name: Install dependecies
       run: 
-        cd home/runner/work/WaiterApp/WaiterApp/fe
+        cd /fe
         yarn install --frozen-lockfile 
       
     - name: Linting
