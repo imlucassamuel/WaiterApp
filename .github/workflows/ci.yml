@@ -21,13 +21,17 @@ jobs:
         cache: 'yarn'
 
     - name: Install dependecies
-      run: cd WaiterApp/fe && yarn install --frozen-lockfile 
+      working-directory: WaiterApp/fe
+      run: yarn install --frozen-lockfile 
 
     - name: Linting
-      run: cd WaiterApp/fe && yarn ci:lint 
+      working-directory: WaiterApp/fe
+      run: yarn ci:lint 
 
     - name: Typechecking
-      run: cd WaiterApp/fe && yarn typecheck
+      working-directory: WaiterApp/fe
+      run: yarn typecheck
 
     - name: Teste
-      run: cd WaiterApp/fe && yarn test:ci
+      working-directory: WaiterApp/fe
+      run: yarn test:ci
