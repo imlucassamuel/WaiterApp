@@ -21,7 +21,9 @@ jobs:
         cache: 'yarn'
 
     - name: Install dependecies
-      run: yarn install --frozen-lockfile 
+      run: 
+        cd /fe
+        yarn install --frozen-lockfile 
       
     - name: Linting
       run: yarn ci:lint 
