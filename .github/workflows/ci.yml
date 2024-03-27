@@ -22,13 +22,21 @@ jobs:
         cache-dependency-path: './fe/yarn.lock'
 
     - name: Install dependecies
-      run: yarn install --frozen-lockfile 
+      run: |
+        cd fe 
+        yarn install --frozen-lockfile 
       
     - name: Linting
-      run: yarn ci:lint 
+      run: |
+        cd fe 
+        yarn ci:lint 
 
     - name: Typechecking
-      run: yarn typecheck
+      run: |
+        cd fe 
+        yarn typecheck
 
     - name: Teste
-      run: yarn test:ci
+      run: |
+        cd fe 
+        yarn test:ci
