@@ -19,23 +19,16 @@ jobs:
       with:
         node-version: '20.x'
         cache: 'yarn'
+        cache-dependency-path: './fe/yarn.lock'
 
     - name: Install dependecies
-      run: |
-        cd WaiterApp/fe
-        yarn install --frozen-lockfile
+      run: yarn install --frozen-lockfile 
       
     - name: Linting
-      run: |
-        cd WaiterApp/fe
-        yarn ci:lint 
+      run: yarn ci:lint 
 
     - name: Typechecking
-      run: |
-        cd WaiterApp/fe
-        yarn typecheck
+      run: yarn typecheck
 
     - name: Teste
-      run: |
-        cd WaiterApp/fe
-        yarn test:ci
+      run: yarn test:ci
