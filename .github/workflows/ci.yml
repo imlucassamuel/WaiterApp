@@ -22,20 +22,20 @@ jobs:
 
     - name: Install dependecies
       run: |
-        cd fe
-        yarn install --frozen-lockfile 
+        cd WaiterApp/fe
+        yarn install --frozen-lockfile
       
     - name: Linting
       run: |
-        cd fe
+        cd WaiterApp/fe
         yarn ci:lint 
 
     - name: Typechecking
       run: |
-        cd fe 
+        cd WaiterApp/fe
         yarn typecheck
 
     - name: Teste
       run: |
-        cd fe
+        cd WaiterApp/fe
         yarn test:ci
