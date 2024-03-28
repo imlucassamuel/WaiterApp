@@ -12,5 +12,4 @@ phases:
 
   build:
     commands:
-      - cd fe
       - yarn build
